@@ -16,7 +16,7 @@
 - `Funcionalidad 2`: Guarda un historial de las conversiones hechas
 
 \## 📁 Acceso al proyecto
-   - Clona este repositorio en la capeta de tu preferencia.
+   - Clona este repositorio en la carpeta de tu preferencia.
      
 \## 🛠️ Abre y ejecuta el proyecto
 
