@@ -6,7 +6,8 @@
 <p align="left">Proyecto en desarrollo para conviertir diferentes divisas con la ayuda de un API y guardar historial de conversiones que el usuario realice </p>
 <p align="center">
   
-![monedasmeme](https://github.com/LiaS1818/ConversorDeMoneda/assets/76524268/aede4ba0-dfac-43d1-bfcf-d0612d66b535)
+![monedasmeme](https://github.com/LiaS1818/ConversorDeMoneda/assets/76524268/228ef763-dd9c-4b7e-86c1-e1458075bb57)
+
 </p>
 
 ## :hammer:Funcionalidades del proyecto
