@@ -1,38 +1,22 @@
 package modelos;
 
-import com.google.gson.FieldNamingPolicy;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.google.gson.annotations.SerializedName;
 
-import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
+import java.util.Map;
 
 public class Moneda {
-   public MonedaOmdb getInfoMonedas(String moneda) {
-      Gson gson = new GsonBuilder()
-              .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
-              .setPrettyPrinting()
-              .create();
-      try {
-         HttpClient client = HttpClient.newHttpClient();
-         HttpRequest request = HttpRequest.newBuilder()
-                 .uri(URI.create("https://v6.exchangerate-api.com/v6/853ef4fd7ee90ca7533c03b6/latest/" + moneda + "/"))
-                 .build();
-         HttpResponse<String> response = client
-                 .send(request, HttpResponse.BodyHandlers.ofString());
+    @SerializedName("base_code")
+    private String base_code;
+    @SerializedName("conversion_rates")
+    private Map<String, Double> conversion_rates;
 
-         String json = response.body();
-         return gson.fromJson(json, MonedaOmdb.class);
-      } catch (IllegalArgumentException e) {
-         System.out.println("Error en URI, verifique la direccion");
-         System.out.println(e.getMessage());
-      } catch (IOException | InterruptedException e) {
-         throw new RuntimeException(e);
-      }
-       return null;
-   }
+    public String getBase_code() {
+        return base_code;
+    }
+
+    public Map<String, Double> getConversion_rates() {
+        return conversion_rates;
+    }
 
 }
+

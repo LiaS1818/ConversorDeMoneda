@@ -1,7 +1,5 @@
 package modelos;
 
-import modelos.MonedaOmdb;
-
 import java.util.Map;
 import java.util.Scanner;
 
@@ -13,7 +11,7 @@ public class Convertidor {
     private double resultado;
 
     private Map<String, Double> monedas;
-    public Convertidor(MonedaOmdb monedaOmdb) {
+    public Convertidor(Moneda monedaOmdb) {
         this.paisBase = monedaOmdb.getBase_code();
         this.monedas = monedaOmdb.getConversion_rates();
 

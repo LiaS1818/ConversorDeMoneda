@@ -1,6 +1,6 @@
 import modelos.Convertidor;
+import modelos.ConsultaMoneda;
 import modelos.Moneda;
-import modelos.MonedaOmdb;
 
 import java.util.Scanner;
 
@@ -26,7 +26,7 @@ public class Principal {
             Scanner teclado = new Scanner(System.in);
              opcion = teclado.nextInt();
 
-            MonedaOmdb monedaOmdb;
+            Moneda moneda;
 
             switch (opcion) {
                 case 1:
@@ -57,9 +57,9 @@ public class Principal {
                     System.out.println("Opcion no valida");
                 break;
             }
-            Moneda moneda = new Moneda();
-            monedaOmdb = moneda.getInfoMonedas(pais);
-            Convertidor convertidor = new Convertidor(monedaOmdb);
+            ConsultaMoneda consultaMoneda = new ConsultaMoneda();
+            moneda = consultaMoneda.getInfoMonedas(pais);
+            Convertidor convertidor = new Convertidor(moneda);
             convertidor.setCambio(paisCambio);
             convertidor.convertir();
         }
